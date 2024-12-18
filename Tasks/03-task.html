@@ -68,7 +68,7 @@
         <input id="saveButton" type="button" value="Сохранить">
     </form>
     
-    <table id="productsTable">
+    <table id="productsTable" style="border: none;">
 
     </table>
 
@@ -100,6 +100,7 @@
         });
 
         function addRow(name, price, currency) {
+            productsTable.removeAttribute("style");
             let tr = document.createElement("tr");
             tr.insertAdjacentHTML("beforeend", `<td>${name}</td>`);
             tr.insertAdjacentHTML("beforeend", `<td>${price}</td>`);
